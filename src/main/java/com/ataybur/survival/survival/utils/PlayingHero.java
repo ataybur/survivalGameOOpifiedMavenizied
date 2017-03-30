@@ -9,7 +9,11 @@ public class PlayingHero extends PlayingCharacter<Hero> {
 	public PlayingHero(Hero instance) {
 		super(instance);
 	}
-
+	
+	public boolean isNotAlive(PlayingCharacter<Enemy> currentEnemy)  throws InstantiationException, IllegalAccessException{
+		return !isAlive(currentEnemy);
+	}
+	
 	public boolean isAlive(PlayingCharacter<Enemy> currentEnemy) throws InstantiationException, IllegalAccessException {
 		Double heroHpDouble = super.getCharacterRemainingHp(currentEnemy);
 		boolean result;

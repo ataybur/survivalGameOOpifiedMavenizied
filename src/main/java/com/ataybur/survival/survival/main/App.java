@@ -31,7 +31,6 @@ public class App {
 					.map(LineChecker::new) //
 					.map(LineChecker::parseForLineType) //
 					.map(LineParser::parseLineToInfo) //
-					// .collect(Collectors.toList());
 					.collect(new LineInfoCollector());
 		});
 	}
