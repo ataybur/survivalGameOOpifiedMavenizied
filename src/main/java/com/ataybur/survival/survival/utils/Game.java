@@ -51,9 +51,7 @@ public class Game {
 						return road.getMeter();
 					}) //
 					.map(enemyMap::get) //
-					.map(Optional::ofNullable) //
-					.filter(Optional::isPresent)
-					.map(Optional::get) //
+					.filter((e) -> e != null)
 					.map(PlayingCharacter<Enemy>::new) //
 					.filter(predicateThrowing) //
 					.findFirst() //
